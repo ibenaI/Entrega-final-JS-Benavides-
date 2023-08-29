@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-color: #181818;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+input,
+textarea {
+    margin: 0;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* -------------------------------------------------------------- */
+/* hay estilos compartidos entre carrito e index */
+.Commerce {
+    max-width: 1200px;
+    margin: 0px auto;
+    background-color: #181818;
+}
+
+
+.barra-superior {
+    background-color: #181818;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 10);
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 50px;
+}
+
+.nav li a {
+    font-size: 1.5rem;
+    color: gold;
+}
+
+.contador {
+    padding: 0.25rem;
+
+    border-radius: 0.25rem;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 25x;
+    color: gold;
+}
+
+.main {
+    background-color: #181818;
+    padding: 10px;
+}
+
+.main-titulo {
+    margin: 10px;
+    font-size: 1.6rem;
+    color: gold;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 10);
+    border-radius: 5px;
+}
+
+.producto-img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.producto-detalles {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    background-color: dimgrey;
+    margin-top: -1rem;
+    position: relative;
+    border-radius: 3px;
+    z-index: 0;
+    color: white;
+}
+
+.producto-detalles .nombre {
+    font-size: 1.4rem;
+}
+
+.producto-detalles .precio {
+    color: gold;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.producto-detalles .agregar {
+    border-radius: 4px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    font-weight: 550;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 10);
+}
+
+.agregar:hover {
+    background-color: gold;
+    color: black;
+}
+
+/* ------------------------------------------------- */
+/* estilos solo de carrito */
+.contenedor-carrito {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.carritosin-nada,
+.carrito-completado {
+    color: gold;
+    /* display: none; */
+}
+
+.carrito-productos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.carrito-producto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    padding-right: 1.5rem;
+    border-radius: 10px;
+    /* border: solid  1px gold; */
+    box-shadow: 0 0 5px 0 gold;
+    background-color: #181818;
+    color: gold;
+}
+
+.carrito-producto small {
+    font-size: 0.75rem;
+}
+
+.carrito-producto-img {
+    width: 4rem;
+}
+
+.carrito-eliminar-producto {
+    border: 0;
+    font-size: 20px;
+    background-color: transparent;
+    color: gold;
+    cursor: pointer;
+}
+.carrito-eliminar-producto:hover {
+    color: red;
+    border-radius: 1rem;
+}
+
+.carrito-acciones {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.carrito-acciones-vaciar {
+    border: 1px solid gold;
+    background-color: transparent;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: gold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.carrito-acciones-vaciar:hover {
+    background-color: gold;
+    color: black;
+}
+
+.carrito-acciones-comprar {
+    border: 1px solid gold;
+    background-color: transparent;
+    padding: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    color: gold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.carrito-acciones-comprar:hover {
+    background-color: gold;
+    color: black;
+}
+
+.carrito-acciones-derecha {
+    display: flex;
+
+}
+
+.carrito-acciones-total {
+    display: flex;
+    gap: 5px;
+    border: 0;
+    background-color: gold;
+    padding: 1rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: auto;
+}
+
+
+/* esto esconde de momento los productos agregados al carrito, las acciones (comprar, eliminar carrito y total) y el mensaje de compra */
+.disabled {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------- */
+/* footer */
+footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px
+}
+
+footer p {
+    color: gold;
+    text-align: center;
+}
